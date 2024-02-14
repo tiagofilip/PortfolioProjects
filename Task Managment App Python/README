@@ -1,0 +1,11 @@
+/ENG
+
+This project is entirely in Portuguese and was created for one of my Python development classes from my level IV programming course by IEFP. 
+The application allows the user to create a task list as well as edit it by adding and removing tasks. 
+The user can also view the current tasklist, export it or import a new one through CSV format.
+
+/POR
+
+Este projeto está totalmente em Português e foi criado para uma das minhas aulas de desenvolvimento em Python do meu curso de programação de nível IV pelo IEFP. 
+A aplicação permite ao utilizador criar uma lista de tarefas e editá-la, adicionando e removendo tarefas. 
+O utilizador também pode visualizar a lista de tarefas atual, exportá-la ou importar uma nova através do formato CSV.
