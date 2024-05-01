@@ -12,10 +12,15 @@ Configure your server and change the values in "user", "password", and "host" ac
 
 This app allows:
   -Adding new artefacts
+  
   -Editing an existing artefact
+  
   -Deleting an artefact
+  
   -Viewing current artefacts
+  
   -Searching for an artefact
+  
   -Adding a new room
 
   As well as:
