@@ -11,6 +11,7 @@ The museum is purely fictional as well as the logo, in order to replicate an app
 Configure your server and change the values in "user", "password", and "host" according to your needs.
 
 This app allows:
+
   -Adding new artefacts
   
   -Editing an existing artefact
