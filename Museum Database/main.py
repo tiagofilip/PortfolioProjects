@@ -10,7 +10,7 @@ from PIL import Image
 
 
 try:
-    cnx = mysql.connector.connect(user='root', password='2559',
+    cnx = mysql.connector.connect(user='root', password='your_password',
                               host='127.0.0.1',
                               database='artefacts')
 except mysql.connector.Error as err:
@@ -115,7 +115,7 @@ class Add(customtkinter.CTkFrame):
 
         self.widgets = []
 
-        self.conn = mysql.connector.connect(user='root', password='2559', host='127.0.0.1', database='artefacts')
+        self.conn = mysql.connector.connect(user='root', password='your_password', host='127.0.0.1', database='artefacts')
         self.cursor = self.conn.cursor()
 
         self.cursor.execute("SELECT Room_Number FROM Location")
@@ -216,7 +216,7 @@ class Add(customtkinter.CTkFrame):
             CTkMessagebox(title="Error", message="Please fill all the boxes.", icon = 'cancel')
         else:
             try:
-                with mysql.connector.connect(user='root', password='2559', host='127.0.0.1', database='artefacts') as cnx:
+                with mysql.connector.connect(user='root', password='your_password', host='127.0.0.1', database='artefacts') as cnx:
                     cursor = cnx.cursor()
                     insert_query = ("INSERT INTO artefact "
                             "(Name_Artefact, ID, Characteristics, Year_Acquired, Historical_Period_Name, FQ_Restauration, State, Room_Number) "
@@ -282,7 +282,7 @@ class Add_Room(customtkinter.CTkFrame):
             return
 
         try:
-            cnx = mysql.connector.connect(user='root', password='2559', host='127.0.0.1', database='artefacts')
+            cnx = mysql.connector.connect(user='root', password='your_password', host='127.0.0.1', database='artefacts')
         except mysql.connector.Error as err:
             CTkMessagebox(title="Error", message="Connection failed", icon="cancel")
             return 
@@ -311,7 +311,7 @@ class Edit(customtkinter.CTkFrame):
         
         self.widgets = []
 
-        self.conn = mysql.connector.connect(user='root', password='2559', host='127.0.0.1', database='artefacts')
+        self.conn = mysql.connector.connect(user='root', password='your_password', host='127.0.0.1', database='artefacts')
         self.cursor = self.conn.cursor()
 
         self.cursor.execute("SELECT Room_Number FROM Location")
@@ -420,7 +420,7 @@ class Edit(customtkinter.CTkFrame):
         updated_characteristics = self.characteristics_entry.get()
 
         try:
-            with mysql.connector.connect(user='root', password='2559',
+            with mysql.connector.connect(user='root', password='your_password',
                                         host='127.0.0.1',
                                         database='artefacts') as cnx:
                 cursor = cnx.cursor()
@@ -446,7 +446,7 @@ class Edit(customtkinter.CTkFrame):
         entered_id = self.Id_Entry.get()
 
         try:
-            with mysql.connector.connect(user='root', password='2559',
+            with mysql.connector.connect(user='root', password='your_password',
                               host='127.0.0.1',
                               database='artefacts') as cnx:
                 cursor = cnx.cursor()
@@ -527,7 +527,7 @@ class Delete(customtkinter.CTkFrame):
 
         if response == "Delete Artefact":
             try:
-                with mysql.connector.connect(user='root', password='2559', host='127.0.0.1', database='artefacts') as cnx:
+                with mysql.connector.connect(user='root', password='your_password', host='127.0.0.1', database='artefacts') as cnx:
                     cursor = cnx.cursor()
 
                     query = "DELETE FROM artefact WHERE ID = %s"
@@ -738,7 +738,7 @@ class View(customtkinter.CTkFrame):
         self.widgets.append(self.scroll)
         
 
-        with mysql.connector.connect(user='root', password='2559', host='127.0.0.1', database='artefacts') as cnx:
+        with mysql.connector.connect(user='root', password='your_password', host='127.0.0.1', database='artefacts') as cnx:
             cursor = cnx.cursor()
             query = "SELECT * FROM artefact"
             cursor.execute(query)
@@ -764,7 +764,7 @@ class View(customtkinter.CTkFrame):
     def refresh_database(self):
 
         try:
-            cnx = mysql.connector.connect(user='root', password='2559', host='127.0.0.1', database='artefacts')
+            cnx = mysql.connector.connect(user='root', password='your_password', host='127.0.0.1', database='artefacts')
             cursor = cnx.cursor()
             query = "SELECT * FROM artefact"
             cursor.execute(query)
